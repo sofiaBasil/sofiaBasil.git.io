@@ -1,0 +1,19 @@
+body {
+    background-image: url(“/background.png”);
+}
+
+h2 {
+    background-color: green;
+}
+
+main {
+    background-color: blue;
+}
+
+button {
+    padding: 40px;
+}
+
+button:hover{
+    background-color: yellow;
+}
