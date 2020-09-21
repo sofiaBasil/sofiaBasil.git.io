@@ -1,5 +1,5 @@
 body {
-    background-image: https://github.com/sofiaBasil/sofiaBasil.git.io/blob/master/Homework3(“background.png”);
+    background-image: url(“https://github.com/sofiaBasil/sofiaBasil.git.io/blob/master/Homework3/background.png”);
 }
 
 h1 {
@@ -8,8 +8,6 @@ h1 {
 
 h2 {
     background-color: rgb(247, 149, 70);
-
-}
 }
 
 main {
