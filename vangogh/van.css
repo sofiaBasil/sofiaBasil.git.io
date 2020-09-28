@@ -1,0 +1,379 @@
+/* for future use
+font-family: "Baskervville", serif;
+font-family: "Libre Baskerville", serif;
+font-family: "Crimson Text", serif;
+*/
+
+html {
+  background-color: #d7e6f2;
+  margin: 10px;
+}
+
+/* asterisk means all elements */
+* {
+  box-sizing: border-box;
+}
+
+/* styling for navigation bar */
+header {
+  width: 100%;
+  height: 70px;
+  background-color: #eadaad;
+}
+/* auto is the default value and the browser will calculate it */
+ul {
+  width: auto;
+  float: right;
+  margin-top: 8px;
+}
+/* inline block allows the items of the list to be displayed horizontally; does not start a new line */
+li {
+  display: inline-block;
+  padding: 15px 30px;
+}
+
+/* styling for links */
+a:link {
+  color: #333333;
+  text-decoration: none;
+  text-align: center;
+  font-family: "Baskervville", serif;
+}
+
+a:visited {
+  color: #333333;
+}
+
+a:hover {
+  color: #94a6b9;
+}
+
+a.active {
+  color: #94a6b9;
+}
+
+/* for the h1 heading of the nav bar */
+#vincentNav {
+  position: absolute;
+  padding: 3px;
+  float: left;
+  margin-left: 2%;
+  margin-top: 15px;
+  font-family: 'Libre Baskerville', serif;
+  color: #333333;
+}
+
+/* self portrait of vvg on home page */
+#vincentSelf {
+  width: 450px;
+  height: 550px;
+  float: left;
+  margin-left: 2px;
+  margin-right: 10px;
+  margin-top: 20px;
+  margin-bottom: 25px;
+  border: 10px solid #aec5e4;
+}
+
+/* introduction paragraph on home page */
+#intro {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  display: table;
+  font-size: 30px;
+  background-color: #aec5e4;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 100px;
+  margin-bottom: -10px;
+}
+
+/* hover color for any link used in p */
+#inTextLink:hover {
+  color: #f1dda5;
+}
+
+/* styles the 3 images on front page */
+#introSunflower {
+  width: 250px;
+  height: 250px;
+  border: 10px solid #aec5e4;
+}
+
+#introStarry{
+  width: 350px;
+  height: 250px;
+  border: 10px solid #aec5e4;
+}
+
+#introBlossom {
+  width: 300px;
+  height: 250px;
+  border: 10px solid #aec5e4;
+}
+
+.introRow {
+  display: flex;
+}
+
+.introColumn {
+  flex: 15%;
+  justify-content: center;
+  padding: 5px;
+}
+
+/* styling for about page */
+#aboutHeader {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+
+.bio {
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  background-color: #aec5e4;
+  padding: 15px;
+  display: table;
+}
+
+/* styling images on about page */
+#bioVincent {
+  width: 230px;
+  height: 260px;
+  float: left;
+  margin-left: 2px;
+  margin-right: 10px;
+  margin-bottom: 25px;
+  border: 10px solid #aec5e4;
+}
+#bioPotato {
+  margin-left: -245px;
+  width: 360px;
+  height: 250px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+#bioHolland{
+  width: 350px;
+  height: 250px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+#bioBible {
+  width: 330px;
+  height: 250px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+#bioPeasant {
+  width: 320px;
+  height: 250px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+.bioRow1{
+  display: flex;
+}
+
+.bioColumn {
+  flex: 50%;
+  padding: 5px;
+  justify-content: center;
+}
+
+#bioBandage {
+  width: 250px;
+  height: 325px;
+  float: right;
+  border: 10px solid #aec5e4;
+  margin-left: 10px;
+  margin-top: 22px;
+}
+
+#bioJoseph {
+  margin-left: -5px;
+  width: 350px;
+  height: 280px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+#bioDoctor{
+  width: 350px;
+  height: 280px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+#bioHouse {
+  width: 330px;
+  height: 280px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+#bioRoom {
+  width: 330px;
+  height: 280px;
+  border: 10px solid #eadaad;
+  border-radius: 50%;
+}
+
+.bioRow2{
+  display: flex;
+}
+
+.bioColumn2 {
+  flex: 50%;
+  justify-content: center;
+  padding: 5px;
+}
+
+#bioEternity {
+  width: 220px;
+  height: 230px;
+  float: left;
+  border: 10px solid #aec5e4;
+  margin-right: 10px;
+}
+
+/* styling for color scheme page */
+#colorHeader {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+
+#vincentPalette {
+  margin: 20px;
+  width: 500px;
+  height: 300px;
+  border: 10px solid #eadaad;
+}
+
+#earlyHeading {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+
+#lateHeading {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+#earlyColor {
+  margin: 20px;
+  width: 700px;
+  height: 200px;
+}
+#lateColor {
+  margin: 20px;
+  width: 700px;
+  height: 200px;
+}
+.colorAlign {
+  text-align: center;
+}
+.paletteDescription {
+  font-size: 25px;
+  line-height: 1.5;
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  background-color: #aec5e4;
+  padding: 15px;
+}
+
+/* styling for art and more pages */
+#roses {
+  width: 650px;
+  height: 465px;
+  float: left;
+  margin-left: 2px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 25px;
+  border: 10px solid #aec5e4;
+}
+
+#moreHeader {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+
+.roses {
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  background-color: #aec5e4;
+  padding: 15px;
+  float: right;
+}
+
+#impressHeader {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+
+#postHeader {
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  font-size: 45px;
+  text-align: center;
+  text-shadow: 2px 2px #aec5e4;
+}
+
+.artPhotos {
+  text-align: center;
+}
+
+.postImpressionism {
+  font-size: 22px;
+  line-height: 1.5;
+  font-family: "Crimson Text", serif;
+  color: #333333;
+  background-color: #aec5e4;
+  padding: 15px;
+  float: right;
+}
+
+/* styling for buttons */
+.back {
+  position: absolute;
+  left: 1.3%;
+  color: #333333;
+  background-color: #eadaad;
+  padding: 15px 32px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.next {
+  position: absolute;
+  right: 1.3%;
+  color: #333333;
+  background-color: #eadaad;
+  padding: 15px 32px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
