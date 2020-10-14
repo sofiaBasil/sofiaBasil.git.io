@@ -1,0 +1,52 @@
+html {
+    background-color: #fff2e6;
+    margin: 10px;
+  }
+
+#doors {
+    display: grid;
+    grid-template-columns: 20% 20% 20%;
+    grid-template-rows: 20% 20% 20%;
+  }
+
+#manchester {
+    grid-column-start: 1
+    <img id="manchester.jpg" src="webArt/Photos/manchester.jpg">
+}
+
+#zeppelin {
+    grid-column-start: 2
+}
+
+#reignwolf {
+    grid-column-start: 3
+}
+
+#vulfPeck {
+    grid-column-start: 4
+}
+
+#main {
+    grid-column-start: 5
+}
+
+#dealCasino {
+    grid-column-start: 6
+}
+
+#theWall {
+    grid-column-start: 7
+}
+
+#buckley {
+    grid-column-start: 8
+}
+
+#RATM {
+    grid-column-start: 9
+}
+
+
+
+
+
