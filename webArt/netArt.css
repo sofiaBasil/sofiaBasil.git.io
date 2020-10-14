@@ -1,0 +1,54 @@
+html {
+    background-color: #271401;
+    margin: 20px;
+  }
+
+.doors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+#england {
+    height: 50vh;
+    width: 50vh;
+}
+
+#france {
+    height: 50vh;
+    width: 50vh;
+}
+
+#italy {
+    height: 50vh;
+    width: 50vh;
+}
+
+#spain {
+    height: 50vh;
+    width: 50vh;
+}
+
+#israel {
+    height: 50vh;
+    width: 50vh;
+}
+
+#portugal {
+    height: 50vh;
+    width: 50vh;
+}
+
+.Headers {
+    display: flex;
+    padding: 3px;
+    margin-left: 2%;
+    margin-top: 15px;
+    color: #333333;
+  }
+
+.frames{
+    display: flex;
+    align-items: center;
+}
