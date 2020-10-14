@@ -12,7 +12,10 @@ html {
 
 #manchester {
     grid-column-start: 1
-    <img id="manchester.jpg" src="webArt/Photos/manchester.jpg">
+    <a href="webArt/webArt.html">
+        <img src="webArt/Photos/manchester.jpg" width="300"
+        height="300" alt="Manchester">
+    </a>
 }
 
 #zeppelin {
