@@ -3,11 +3,12 @@ html {
     margin: 10px;
   }
 
-#doors {
+.wrapper {
+    display: grid;
     display: grid;
     grid-template-columns: 20% 20% 20%;
     grid-template-rows: 20% 20% 20%;
-  }
+}
 
 #manchester {
     grid-column-start: 1
