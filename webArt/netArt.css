@@ -1,5 +1,5 @@
 html {
-    background-color: #271401;
+    background-color: #1D701E73;
     margin: 20px;
   }
 
@@ -40,15 +40,13 @@ html {
     width: 50vh;
 }
 
-.Headers {
+.countries {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 3px;
     margin-left: 2%;
     margin-top: 15px;
-    color: #333333;
+    color: #FFFFFF;
   }
 
-.frames{
-    display: flex;
-    align-items: center;
-}
