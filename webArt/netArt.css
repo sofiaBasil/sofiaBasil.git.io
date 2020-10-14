@@ -10,6 +10,14 @@ html {
     align-content: space-between;
 }
 
+#header {
+    padding: 3px;
+    margin-left: 2%;
+    margin-top: 15px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
 #england {
     height: 50vh;
     width: 50vh;
