@@ -32,6 +32,10 @@ li {
   padding: 15px 30px;
 }
 
+li a:hover {
+  background-color: #ffffff;
+}
+
 /* styling for links */
 a:link {
   color: #333333;
