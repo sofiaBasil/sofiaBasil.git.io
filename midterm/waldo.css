@@ -207,15 +207,9 @@ html {
     background-position: center; 
 }
 
-#body {
-    background-image: repeating-radial-gradient(red, white 10%, blue 15%);
-    background-repeat: no-repeat;
-    background-size: cover;
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-}
+a:visited {
+    color: #000000;
+  }
 
 #winnerHeader {
     color: #000000;
