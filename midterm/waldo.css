@@ -1,11 +1,5 @@
 html {
-    background-image: url("background.jpg");
     background-color: #FFFFFF;
-    height: 500px;
-    background-position: center;
-    background-size: min(cover, 5000%);
-    background-repeat: no-repeat;
-    background-size: cover;
     margin: 10px;
 }
 
@@ -135,11 +129,107 @@ html {
 
 #hint {
     display: flex;
-    align-content: center; 
+    justify-content: center; 
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
 }
 
-.grid {
+.easyContainer {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
-    grid-template-rows: 20% 20% 20% 20% 20% 20% 20% 20% 20% 20%;
-  }
+    grid-area: photo;
+    background: url(easy.jpg);
+    /* <-- background size */
+    background-size: cover; 
+    /* <-- background position */
+    background-position: center; 
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    align-content: stretch;
+    width: 99%;
+    height: 1000px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.mediumContainer {
+    display: grid;
+    grid-area: photo;
+    background: url(medium.jpg);
+    /* <-- background size */
+    background-size: cover; 
+    /* <-- background position */
+    background-position: center; 
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    align-content: stretch;
+    width: 99%;
+    height: 1000px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.hardContainer {
+    display: grid;
+    grid-area: photo;
+    background: url(hard.jpg);
+    /* <-- background size */
+    background-size: cover; 
+    /* <-- background position */
+    background-position: center; 
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    align-content: stretch;
+    width: 99%;
+    height: 1000px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.grid-item {
+    /*border: 1px solid rgba(0, 0, 0, 0.8);*/
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+}
+
+.photo {
+    grid-area: photo;
+    background: url(easy.jpg);
+    height: 100%;
+    /* <-- background size */
+    background-size: cover; 
+    /* <-- background position */
+    background-position: center; 
+}
+
+#body {
+    background-image: repeating-radial-gradient(red, white 10%, blue 15%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+}
+
+#winnerHeader {
+    color: #000000;
+    height: 100%;
+    display: flex;
+    vertical-align: center;
+    align-content: center;
+    justify-content: center;
+    font-family: 'Bangers';
+    font-size: 125px;
+    padding: 250px;
+    background-image: repeating-radial-gradient(red, white 10%, blue 15%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 925px;
+    height: 160px;
+}
