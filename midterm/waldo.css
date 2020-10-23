@@ -222,7 +222,7 @@ html {
     background-size: cover; 
     /* <-- background position */
     background-position: center; 
-    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto  auto auto;
     align-content: stretch;
     width: 99%;
     height: 1000px;
@@ -242,7 +242,7 @@ html {
     display: grid;
     justify-content: center;
     align-content: center;
-
+    color: rgba(0, 0, 0, 0.514);
     gap: 4px;
     grid-auto-flow: column;
 }
@@ -262,6 +262,10 @@ a:visited {
     color: #000000;
   }
 
+a {
+    color: rgba(0, 0, 0, 0.514);
+}
+
 /* Styles the win page */
 #winnerHeader {
     color: #000000;
@@ -278,5 +282,13 @@ a:visited {
     background-size: cover;
     width: 925px;
     height: 160px;
+}
+
+/* Media Query */
+@media (max-width: 1000px) {
+    body {
+        grid: 100%;
+        max-width: 100%;
+    }
 }
 
