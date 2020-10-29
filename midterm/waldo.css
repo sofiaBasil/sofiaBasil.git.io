@@ -14,7 +14,6 @@ html {
 /* Styles the header bar */
 .headerBar {
     width: 100%;
- 
     display: flex;
     flex-wrap: wrap;
     background-color: red;
@@ -328,7 +327,8 @@ a {
 @media only screen and (max-width: 400px) {
     /* Styles the missing photo on the home page */
     #missing {
-        width: 96%;
+        width: 96vw;
+        height: 145vw;
         margin-left: 2%;
         margin-right: 2%;
         margin-bottom: 25px;
