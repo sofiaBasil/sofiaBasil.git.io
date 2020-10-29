@@ -321,9 +321,13 @@ a {
     padding: 250px;
     background-image: repeating-radial-gradient(red, white 10%, blue 15%);
     background-repeat: no-repeat;
-    background-size: cover;
     width: 925px;
     height: 160px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    overflow: scroll;   
 }
 
 /* Media Query for smaller devices*/
