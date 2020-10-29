@@ -88,30 +88,82 @@ html {
 /* Styles the missing photo on the home page */
 #missing {
     display: flex;
+    flex-direction: column;
+    
     width: 300px;
     height: 460px;
-    margin-left: 200px;
+    margin-left: 100px;
     margin-right: 2px;
     margin-bottom: 25px;
     margin-top: 50px;
     padding: 0px 5px;
 }
 
-/* Styles the photos for each level on the home page */
-.levels {
-    float: right;
-    display: flex;
-    flex-direction: column;
-    width: 600px;
-    height: 100px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 25px;
-    margin-top: 50px;
-    padding: 0px 50px;
+/* Styles the how to button on home page */
+#howToContainer {
+    position: relative;
+    width: 50%;
 }
 
-/* Styles the photos on the home page */
+#howToImage {
+    top: 0;
+    left: 0;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 200px;
+    align-content: space-around;
+    width: 900px;
+    height: 110px;
+}
+
+#howToOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    float: right;
+    margin-bottom: 25px;
+    margin-top: 50px;
+    margin-left: 10px;
+    margin-right: 20px;
+    align-content: space-around;
+    width: 900px;
+    height: 110px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #000000;
+}
+
+#howToContainer:hover #howToOverlay {
+    opacity: 1;
+}
+
+#howToText {
+    color: #FFFFFF;
+    font-size: 18px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: 'Bangers';
+    min-width: 700px;
+    min-height: 110px;
+}
+
+/* Styles the photos for each level on the home page */
+.levels {
+    display: flex;
+    align-content: space-between;
+    width: 200px;
+    height: 200px;
+    border: 10px solid #ffffff;
+    border-radius: 25%;
+}
+
+/* Styles the body of the home page */
 .homePage {
     display: flex;
     justify-content: flex-end;
