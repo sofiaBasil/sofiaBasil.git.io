@@ -66,7 +66,7 @@ html {
 .menu a{
     height: 100%;
     display: table;
-    float: center;
+    
     padding: 0px 20px;
 }
 
@@ -109,17 +109,6 @@ main {
 #levelsDiv {
     display: flex;
     flex-wrap: wrap;
-}
-
-/* Styles the missing photo on the home page */
-#missing {
-    width: 300px;
-    height: 460px;
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-bottom: 25px;
-    margin-top: 50px;
-    padding: 0px 5px;
 }
 
 /* Styles the how to button on home page */
@@ -337,28 +326,27 @@ a {
 }
 
 /* Media Query for header*/
-@media only screen and (max-width: 600px) {
-    #cookie-alert {
-        animation: cookie-popup-mobile;
-        animation-delay: 2s;
-        animation-duration: 15s;
-        width: 90vw;
-        top: -100vh;
-        padding: 5vw;
+@media only screen and (max-width: 400px) {
+    /* Styles the missing photo on the home page */
+    #missing {
+        width: 96%;
+        margin-left: 2%;
+        margin-right: 2%;
+        margin-bottom: 25px;
+        margin-top: 50px;
+        padding: 0px 5px;
     }
 }
 
-@media only screen and (min-width: 600px) {
-    #cookie-alert {
-        animation: cookie-popup;
-        animation-delay: 2s;
-        animation-duration: 40s;
-        width: 21vw;
-        right: -25vw;
-        bottom: 1vh;
-        padding: 2vw;
+@media only screen and (min-width: 400px) {
+    /* Styles the missing photo on the home page */
+    #missing {
+        width: 300px;
+        height: 460px;
+        margin-left: 50px;
+        margin-right: 50px;
+        margin-bottom: 25px;
+        margin-top: 50px;
+        padding: 0px 5px;
     }
 }
-
-
-
