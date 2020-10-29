@@ -180,8 +180,12 @@ main {
 
 .hintImage {
     display: block;
-    height: 50px;
-    width: 75px;
+    height: 75%;
+    width: 20%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
     padding-bottom: 25px;
 }
 
