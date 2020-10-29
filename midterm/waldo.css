@@ -63,7 +63,6 @@ html {
 }
 
 .menu a{
-    height: 100%;
     display: table;
     padding: 0px 20px;
 }
@@ -186,7 +185,7 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    padding-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .hintOverlay {
@@ -195,8 +194,9 @@ main {
     bottom: 0;
     left: 0;
     right: 0;
-    height: 75%;
-    width: 20%;
+    height: 10vh;
+    width: 92vw;
+    margin-bottom: 50px;
     opacity: 0;
     transition: .5s ease;
     background-color: red;
