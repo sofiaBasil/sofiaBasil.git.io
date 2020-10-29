@@ -88,10 +88,12 @@ html {
 main {
     display: flex;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 #missingContainer {
     display: flex;
+    flex-wrap: wrap;
 }
 
 #howToDiv {
@@ -101,6 +103,12 @@ main {
 #levelsDiv {
     display: flex;
     justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#levelsDiv {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 /* Styles the missing photo on the home page */
