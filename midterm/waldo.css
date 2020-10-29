@@ -14,7 +14,7 @@ html {
 /* Styles the header bar */
 .headerBar {
     width: 100%;
-    height: min-height;
+ 
     display: flex;
     flex-wrap: wrap;
     background-color: red;
@@ -66,7 +66,6 @@ html {
 .menu a{
     height: 100%;
     display: table;
-    
     padding: 0px 20px;
 }
 
@@ -325,7 +324,7 @@ a {
     height: 160px;
 }
 
-/* Media Query for header*/
+/* Media Query for smaller devices*/
 @media only screen and (max-width: 400px) {
     /* Styles the missing photo on the home page */
     #missing {
@@ -338,6 +337,7 @@ a {
     }
 }
 
+/* Media Query for larger devices*/
 @media only screen and (min-width: 400px) {
     /* Styles the missing photo on the home page */
     #missing {
