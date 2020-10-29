@@ -95,7 +95,7 @@ main {
 }
 
 #howToDiv {
-    
+    margin-top: 1px;
 }
 
 #levelsDiv {
@@ -107,8 +107,8 @@ main {
 #missing {
     width: 300px;
     height: 460px;
-    margin-left: 100px;
-    margin-right: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
     margin-bottom: 25px;
     margin-top: 50px;
     padding: 0px 5px;
@@ -177,16 +177,6 @@ main {
     border-radius: 25%;
 }
 
-/* Styles the photos on each level */
-#waldoSearch {
-    width: 99%;
-    height: 1000px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 25px;
-    margin-top: 25px;
-}
-
 /* Styles the hint section */
 .hintContainer {
     position: relative;
@@ -231,6 +221,16 @@ main {
     font-size: 18px;
 }
 
+#waldoContainer {
+    width: 99%;
+    height: 1000px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    margin-top: 25px;
+    overflow: scroll;   
+}
+
 /* Styles the grid for the easy page */
 .easyContainer {
     display: grid;
@@ -242,12 +242,8 @@ main {
     background-position: center; 
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     align-content: stretch;
-    width: 99%;
+    width: 1522px;
     height: 1000px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 25px;
-    margin-top: 25px;
 }
 
 /* Styles the grid for the medium page */
@@ -261,12 +257,8 @@ main {
     background-position: center; 
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto;
     align-content: stretch;
-    width: 99%;
+    width: 1603px;
     height: 1000px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 25px;
-    margin-top: 25px;
 }
 
 /* Styles the grid for the hard page */
@@ -280,12 +272,8 @@ main {
     background-position: center; 
     grid-template-columns: auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto auto  auto auto;
     align-content: stretch;
-    width: 99%;
+    width: 1547px;
     height: 1000px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 25px;
-    margin-top: 25px;
 }
 
 /* Styles the grid */
@@ -340,11 +328,29 @@ a {
     height: 160px;
 }
 
-/* Media Query */
-@media (max-width: 1000px) {
-    body {
-        grid: 100%;
-        max-width: 100%;
+/* Media Query for header*/
+@media only screen and (max-width: 600px) {
+    #cookie-alert {
+        animation: cookie-popup-mobile;
+        animation-delay: 2s;
+        animation-duration: 15s;
+        width: 90vw;
+        top: -100vh;
+        padding: 5vw;
     }
 }
+
+@media only screen and (min-width: 600px) {
+    #cookie-alert {
+        animation: cookie-popup;
+        animation-delay: 2s;
+        animation-duration: 40s;
+        width: 21vw;
+        right: -25vw;
+        bottom: 1vh;
+        padding: 2vw;
+    }
+}
+
+
 
