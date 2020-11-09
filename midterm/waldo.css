@@ -327,7 +327,7 @@ a {
     margin-right: 10px;
     margin-bottom: 25px;
     margin-top: 25px;
-    overflow: scroll;   
+    overflow: auto;   
 }
 
 /* Media Query for smaller devices*/
