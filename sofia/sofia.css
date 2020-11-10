@@ -23,8 +23,8 @@ body {
 
 .homePage {
     display: flex;
-    justify-content: space-between;
-    align-content: center;
+    justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
     margin-left: 20px;
     margin-right: 20px;
@@ -83,4 +83,10 @@ body {
     top: 40%;
     text-align: center;
     width: 60%;
+}
+
+@media (max-width: 750px) {
+    .homePage {
+        flex-direction: column;
+    }
 }
