@@ -1,5 +1,6 @@
 body {
-    background-color: rgba(179, 110, 105, 0.788);
+    background-color: rgba(13, 51, 73, 0.788);
+    /*rgba(179, 110, 105, 0.788);*/
 }
 .h1 {
     color: #000000;
@@ -17,6 +18,7 @@ body {
     height: 75px;
     display: inline-block;
     background-color: rgb(253, 244, 231);
+    border-radius: 24.5vh;
 }
 
 .homePage {
@@ -40,7 +42,6 @@ body {
     width: 35vh;
     height: 35vh;
     border-radius: 24.5vh;
-    
     opacity: 1;
     transition: .5s ease;
     backface-visibility: hidden;
