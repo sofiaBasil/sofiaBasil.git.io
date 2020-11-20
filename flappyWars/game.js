@@ -1,5 +1,7 @@
+
 //game variables
 let score = 0;
+let started=false;
 let game_over = false;
 let last_counted = "";
 
@@ -7,20 +9,23 @@ let last_counted = "";
 let g = -9.8
 let vy = 0.0;
 let t = 0.0;
-let y = 0.0;
-let y0 = 0.0;
+let y = 100;
+let y0 = 50.0;
 
 //Multiplier for gravity ()
 g*=100;
 
 //pipes
-const d_pipe = 30;
-const w_pipe  = 10;
+const d_pipe = 35;
+const w_pipe  = 15;
 const speed_pipe = 0.45;
 const spacing_pipe = 30;
 let pipes = []
 let pipes_dom = []
 let pipe_id = 0;
+
+//init
+$("#bird").css("bottom", 50 + "vh")
 
 //keypress
 $(window).keypress((e) => {
@@ -32,6 +37,17 @@ $(document).mousedown(() => {
 
 function gameStart() {
     score = 0;
+    started=false;
+    game_over = false;
+    last_counted = "";
+    pipes = [];
+    pipes_dom = []
+    pipe_id = 0;
+
+    $("#game").empty();
+    $("#game").append('<div id="bird"></div>');
+
+    $("#game-over").css("visibility", "hidden");
 
     //Initialize some pipes
     for(let i = 0; i < 4; i++) {
@@ -54,7 +70,7 @@ function gameLoop() {
     
     let bird = document.querySelector("#bird");
 
-    if(!game_over) {
+    if(!game_over && started) {
         for(let i=0; i < pipes.length; i++) {
             let pipe = pipes[i];
 
@@ -84,7 +100,16 @@ function gameLoop() {
                 $("#score").html(score);
             }
         }
-    }    
+    }
+    
+    if (!started) {
+        //if(y == 0){console.log(t);}
+        if(y < 45) {
+            t = 0.0;
+            vy = 175.0;
+            y0 = y;
+        }
+    }
     //redraw
     //redraw bird
     $("#bird").css("bottom", y + "vh")
@@ -92,8 +117,8 @@ function gameLoop() {
     //redraw the pipes
     for(let i=0; i < pipes.length; i++) {
         let pipe=pipes[i];
-        $("#" + pipe["id"] + "-top").css("left", pipe["x"] + "vh");
-        $("#" + pipe["id"] + "-bot").css("left", pipe["x"] + "vh");
+        $("#" + pipe["id"] + "-top").css("left", pipe["x"] + "vw");
+        $("#" + pipe["id"] + "-bot").css("left", pipe["x"] + "vw");
     }
     
     if(!game_over || y > 0) {
@@ -113,8 +138,8 @@ function addPipeToDocument(pipe) {
     $("#" + pipe["id"] + "-top").css("bottom", (20 + (d_pipe/2) + pipe["h"]) + "vh");
     $("#" + pipe["id"] + "-bot").css("bottom", (-70 + 20 - (d_pipe/2) + pipe["h"]) + "vh");
 
-    $("#" + pipe["id"] + "-top").css("left", pipe["x"] + "vh");
-    $("#" + pipe["id"] + "-bot").css("left", pipe["x"] + "vh");
+    $("#" + pipe["id"] + "-top").css("left", pipe["x"] + "vw");
+    $("#" + pipe["id"] + "-bot").css("left", pipe["x"] + "vw");
 
     $("#" + pipe["id"] + "-top").css("width", w_pipe + "vh");
     $("#" + pipe["id"] + "-bot").css("width", w_pipe + "vh");
@@ -126,7 +151,7 @@ function removePipeFromDocument(id) {
 }
 
 function getRandomPipeHeight() {
-    return (Math.floor((Math.random() * 12) + 1)*5);
+    return (Math.floor((Math.random() * 10) + 1)*5);
 }
 
 function collided(el1, el2) {
@@ -145,12 +170,22 @@ function jump() {
         vy = 175.0;
         y0 = y;
     }
+    if(!started) {
+        started = true;
+    }
+    if(started && game_over) {
+        started = false;
+        game_over = false;
+        gameStart();
+    }
 }
 
 function gameOver() {
     //TODO: Popup "Game Over" Screen
     //      Button to restart game
-
+    // Jquery finds game-over element and makes it visible
+    $("#game-over").css("visibility", "visible");
+    //alert("you are terrible, you list");
 }
 
 gameStart();
