@@ -83,6 +83,10 @@ function gameLoop() {
                 $("#bird").css("z-index", "5");
             }
 
+            if(score == 30) {
+                window.href.location = "winner.html"
+            }
+
             //Manage the pipes
             if( pipe['x'] < -1*w_pipe ) {
                 removePipeFromDocument(pipe["id"]);

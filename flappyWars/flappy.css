@@ -66,32 +66,30 @@ audio {
     align-items: center;
     background-color: black;
     width: 100%;
-    height: 100px;
+    height: 200px;
     color: white;
     font-family: 'Press Start 2P';
     text-align: center;
-    margin-top: 0px;
 }
 
 /* Formats X-Wing on home page */
 #bird-home-page {
     display: flex;
-    align-content: center;
-    align-items: center;
+    justify-content: center;
+    align-content: center; 
     width: 200px;
     height: 200px;
     margin: auto;
-    margin-top: 5%;
+    margin-top: 10%;
 }
 
 #menu-buttons {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
-    margin-left: 25%;
-    margin-right: 25%;
-    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10%;
 }
 
 /* Formats buttons */
@@ -100,6 +98,7 @@ audio {
     justify-content: center;
     align-content: center;
     text-align: center;
+    font-size: 16px;
     background-color: black;
     width: 200px;
     height: 100px;
@@ -108,6 +107,7 @@ audio {
     margin-left: auto;
     margin-right: auto;
     margin-top: 2%;
+    margin-bottom: 5%;
 }
 
 #game-over {
@@ -129,7 +129,6 @@ audio {
     margin: auto;
     margin-top: 2%;
 }
-
 
 /* Formats home page if smaller than 730 pixels */
 @media only screen and (max-width: 730px) {
