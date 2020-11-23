@@ -1,6 +1,6 @@
 body {
     overflow: hidden;
-    background-image: url(backgroundd.jpg);
+    background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -9,6 +9,9 @@ body {
     padding: 0;
 }
 
+audio {
+    display: none;
+}
 /* Formats x-wing on game page */
 #bird {
     height: 10vh;
@@ -29,12 +32,13 @@ body {
 
 /* Formats pipes on game page */
 .pipe {
-    background-image: url(backgroundd.jpg);
+    background-image: url(background.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /*background-color: grey;*/
     height: 70vh;
     position: absolute;
+    filter: brightness(1.75);
 }
 
 /* Formats score box on game page */
