@@ -29,7 +29,7 @@ body {
 
 /* Formats pipes on game page */
 .pipe {
-    background-image: url(background.jpg);
+    background-image: url(backgroundd.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     /*background-color: grey;*/
@@ -41,7 +41,7 @@ body {
 #score {
     justify-content: center;
     align-items: center;
-    background: tomato;
+    background: rgb(19, 243, 243);
     position: absolute;
     width: 5vw;
     height: 5vh;
@@ -65,8 +65,8 @@ body {
     height: 100px;
     color: white;
     font-family: 'Press Start 2P';
-    margin-top: 20px;
     text-align: center;
+    margin-top: 0px;
 }
 
 /* Formats X-Wing on home page */
@@ -88,18 +88,22 @@ body {
     margin-left: 25%;
     margin-right: 25%;
     margin-top: 100px;
-   
 }
 
-/* Formats buttons on home page */
+/* Formats buttons */
 .buttons {
+    display: flex;
+    align-content: center;
+    align-items: center;    
     background-color: black;
     width: 200px;
     height: 100px;
     color: white;
     font-family: 'Press Start 2P';
-    margin-top: 20px;
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
 }
 
 #game-over {
@@ -108,7 +112,17 @@ body {
     z-index: 10;
     top: 0;
     left: 0;
-    background-color: tomato;
+    background-color: rgb(165, 30, 7);
     position: absolute;
+}
+
+#deathStar {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    width: 650px;
+    height: 400px;
+    margin: auto;
+    margin-top: 2%;
 }
 
