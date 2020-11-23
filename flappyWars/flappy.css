@@ -136,8 +136,8 @@ audio {
     display: flex;
     align-content: center;
     align-items: center;
-    width: 650px;
-    height: 400px;
+    width: 600px;
+    height: 300px;
     margin: auto;
     margin-top: 2%;
 }
