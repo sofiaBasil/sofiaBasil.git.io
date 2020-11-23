@@ -4,6 +4,7 @@ let score = 0;
 let started=false;
 let game_over = false;
 let last_counted = "";
+const target_score = 4;
 
 //motion variables (physics)
 let g = -9.8
@@ -34,6 +35,9 @@ $(window).keypress((e) => {
 $(document).mousedown(() => {
     if(!game_over) {jump()};
 })
+
+//restart the game on "play Again"
+$("#play-again").click(gameStart);
 
 function gameStart() {
     score = 0;
@@ -68,8 +72,12 @@ function gameLoop() {
     y = (0.5)*g*(t*t) + vy*t + y0
     y = y < 0? 0 : y;
     
+    //create an object for the bird
     let bird = document.querySelector("#bird");
 
+    //if the game is not over and it has started, run this code
+    //this will update the pipes, location of "bird", and has the logic
+    //for when someone wins
     if(!game_over && started) {
         for(let i=0; i < pipes.length; i++) {
             let pipe = pipes[i];
@@ -78,25 +86,36 @@ function gameLoop() {
             let pipe_bot = document.querySelector("#" + pipe["id"] + "-bot");
             let pipe_top = document.querySelector("#" + pipe["id"] + "-top");
             
+            //if the bird collieded, end the game with a loss
             if(collided(bird, pipe_top) || collided(bird, pipe_bot)) {
                 game_over = true;
                 $("#bird").css("z-index", "5");
             }
 
-            if(score == 30) {
-                window.href.location = "winner.html"
+            //if there is a win, end the game
+            if (score == target_score) {
+                window.location.href = "./winner.html";
+                game_over = true;
             }
 
             //Manage the pipes
             if( pipe['x'] < -1*w_pipe ) {
                 removePipeFromDocument(pipe["id"]);
                 pipe_id++;
-                pipes[i] = {'h':getRandomPipeHeight(), 'x':100+w_pipe, 'id':'pipe-' + pipe_id}
+                if(pipe_id <= target_score)
+                {
+                    pipes[i] = {'h':getRandomPipeHeight(), 'x':100+w_pipe, 'id':'pipe-' + pipe_id}
+                }
+                else 
+                {
+                    pipes[i] = {'h':getRandomPipeHeight(), 'x':10000+w_pipe, 'id':'pipe-' + pipe_id}
+                }
                 addPipeToDocument(pipes[i]);
             } else {
                 pipe['x'] -= speed_pipe;
             }
 
+            //increment the score if you pass a pipe
             if(pipe['x'] < 5 && pipe['id'] != last_counted)
             {
                 last_counted = pipe['id'];
@@ -106,8 +125,8 @@ function gameLoop() {
         }
     }
     
+    //if the game hasn't started, make the bird bounce
     if (!started) {
-        //if(y == 0){console.log(t);}
         if(y < 45) {
             t = 0.0;
             vy = 175.0;
@@ -125,6 +144,8 @@ function gameLoop() {
         $("#" + pipe["id"] + "-bot").css("left", pipe["x"] + "vw");
     }
     
+    //game over condition, if the game is over, then run gameOver
+    //otherwise, call the game loop function
     if(!game_over || y > 0) {
         setTimeout(gameLoop, 10);
     } else {
@@ -132,6 +153,7 @@ function gameLoop() {
     }
 }
 
+//add a pipe to the screen
 function addPipeToDocument(pipe) {
     $("#game").append("<div id='"+ pipe["id"] + "-top'></div>");
     $("#game").append("<div id='"+ pipe["id"] + "-bot'></div>");
@@ -149,15 +171,19 @@ function addPipeToDocument(pipe) {
     $("#" + pipe["id"] + "-bot").css("width", w_pipe + "vh");
 }
 
+//remove a pipe from the documnet (the div)
 function removePipeFromDocument(id) {
     $("#" + id + "-top").remove();
     $("#" + id + "-bot").remove();
 }
 
+//function for generating a new pipe height
 function getRandomPipeHeight() {
     return (Math.floor((Math.random() * 10) + 1)*5);
 }
 
+//if two div objects collided, this returns true
+//(el1 and el2 are JS DOM objects)
 function collided(el1, el2) {
     let l = (el1.offsetLeft < el2.offsetLeft + el2.offsetWidth && 
             el1.offsetLeft + el1.offsetWidth > el2.offsetLeft &&
@@ -184,12 +210,11 @@ function jump() {
     }
 }
 
+//have the game over pop up show up
 function gameOver() {
-    //TODO: Popup "Game Over" Screen
-    //      Button to restart game
     // Jquery finds game-over element and makes it visible
     $("#game-over").css("visibility", "visible");
-    //alert("you are terrible, you list");
 }
 
+//start the javascript code to start the game
 gameStart();
