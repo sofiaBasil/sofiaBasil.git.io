@@ -351,3 +351,22 @@ a {
   font-family: 'Xanh Mono';
   font-size: 30px;
 }
+
+/* Styles the photos on the pitch phase */
+.pitchPhotos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 500px;
+  height: 400px;
+  margin: auto;
+}
+
+/* Styles the text on the pitch phase */
+#pitchP {
+  text-align: center;
+  color: #fff;
+  margin-left: 5%;
+  margin-right: 5%;
+}
