@@ -252,6 +252,7 @@ a {
   flex-direction: column;
   background: #312617;
   width: 100%;
+  min-width: 1500px;
   height: calc(var(--fretBoardHeight) * 1px);
   margin-top: 50px;
 }
@@ -371,4 +372,20 @@ a {
   color: #fff;
   margin-left: 5%;
   margin-right: 5%;
+}
+
+/* Media Queries */
+
+/* Media Query for larger devices*/
+@media only screen and (min-width: 400px) {
+    main {
+      flex-wrap: wrap;
+    }
+  }
+ 
+/* Media Query for smaller devices*/
+@media (max-width: 750px) {
+  .homePage {
+      flex-direction: column;
+  }
 }
