@@ -375,17 +375,33 @@ a {
 }
 
 /* Media Queries */
-
-/* Media Query for larger devices*/
-@media only screen and (min-width: 400px) {
-    main {
-      flex-wrap: wrap;
-    }
-  }
  
 /* Media Query for smaller devices*/
 @media (max-width: 750px) {
-  .homePage {
+  .inventory-flip-card {
+      display: flex; 
       flex-direction: column;
+      justify-content: center;
   }
+
+  .headerBar {
+      display: flex; 
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+
+/* Media Query for larger devices*/
+@media only screen and (min-width: 400px) {
+  /* Styles the missing photo on the home page */
+  .inventory-flip-card {
+          width: 300px;
+          height: 460px;
+          margin-left: 50px;
+          margin-right: 50px;
+          margin-bottom: 25px;
+          margin-top: 50px;
+          padding: 0px 5px;
+      }
 }
