@@ -269,6 +269,7 @@ a {
   /* Linear-gradient and box shadow help make it look like a real string */ 
   background: linear-gradient(#eee, #999);
   box-shadow: 76px 3px 10px #806233;
+  box-shadow: spread;
   z-index: 1;
   position: absolute;
   top: calc(var(--stringTop) * 1px);
