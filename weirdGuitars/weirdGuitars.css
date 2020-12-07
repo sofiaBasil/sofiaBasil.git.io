@@ -1,0 +1,352 @@
+html {
+    background-color: rgba(13, 51, 73, 0.788);
+    margin: 10px;
+}
+/* Keeps variables for JS */
+/* These calculations are a really cool & fun new thing that */
+/* I learned from this Youtube man (linked above)  */
+:root {
+  --fretBoardHeight: 300; 
+  --numOfStrings: 6; 
+  --stringHeight: 10;
+  --halfStringHeight: calc(var(--stringHeight) / 2);
+  --stringTop: calc(var(--fretBoardHeight) / var(--numOfStrings) / 2 - var(--halfStringHeight));
+  --doubleFretmarkPosition1: calc(var(--fretBoardHeight) * 0.25);
+  --doubleFretmarkPosition2: calc(var(--fretBoardHeight) * 0.75);
+}
+
+/* Applies to everything */
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+  font-family: 'Xanh Mono';
+}
+
+/* Styles the header bar */
+.headerBar {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    border-radius: 24.5vh;
+    background-color: rgb(253, 244, 231);
+    margin-top: 1%;
+}
+
+/* Styles the little circles in the header */
+.circles {
+    width: 12vh;
+    height: 12vh;
+    border-radius: 4.5vh;
+    opacity: 1;
+    backface-visibility: hidden;
+    z-index: -1;
+}
+
+/* Styles the title */
+.title {
+    height: 100%;
+    display: table;
+    align-items: flex-start;
+    margin-left: 20%;
+}
+
+.title h1{
+    color: black;
+    height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+    font-family: 'Xanh Mono';
+    font-size: 60px;
+    margin-left: 1%;
+}
+
+/* Styles the menu items */
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    align-content: center;
+    justify-content: space-between;
+    justify-content: space-around;
+    height: inherit;
+}
+
+.menu a{
+    display: table;
+    padding: 0px 20px;
+}
+
+.menu a li{
+    display: table-cell;
+    vertical-align: middle;
+    height: 80%;
+    color: black;
+    font-family: 'Xanh Mono';
+    font-size: 40px;
+}
+
+/* Chages the color of the page the user is on */
+.active {
+    border-radius: 24.5vh;
+    background-color: #743838;
+  }
+
+.homePage {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.app {
+    width: 35vh;
+    height: 35vh;
+    border-radius: 14.5vh;
+    opacity: 1;
+    backface-visibility: hidden;
+}
+
+.guitars {
+    width: 35vh;
+    height: 45vh;
+    border-radius: 3vh;
+    opacity: 1;
+    backface-visibility: hidden;
+}
+
+/* https://www.w3schools.com/howto/howto_css_flip_card.asp */
+/* Home Page Flip Cards */
+.flip-card {
+  margin: 3%;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+  
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  .flip-card-front {
+    color: black;
+  }
+  
+  .flip-card-back {
+    width: 35vh;
+    height: 35vh;
+    border-radius: 14.5vh;
+    opacity: 1;
+    backface-visibility: hidden;
+    background-color: #743838;
+    color: white;
+    transform: rotateY(180deg);
+  }
+  
+/* Inventory Page Flip Cards */
+
+/* flip-card */
+.inventory-flip-card {
+  margin: 3%;
+  background-color: transparent;
+  width: 300px;
+  height: 300px;
+  perspective: 1000px;
+}
+
+/* flip-card-inner */
+.inventory-flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+/* flip-card:hover .flip-card-inner */
+.inventory-flip-card:hover .inventory-flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* flip-card-front, .flip-card-back */
+.inventory-flip-card-front, .inventory-flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* flip-card-front */
+.inventory-flip-card-front {
+  color: black;
+}
+
+/* flip-card-back */
+.inventory-flip-card-back {
+  width: 35vh;
+  height: 45vh;
+  border-radius: 3vh;
+  opacity: 1;
+  backface-visibility: hidden;
+  background-color: #743838;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.contact-App {
+  display: flex;
+  width: 35vh;
+  height: 35vh;
+  border-radius: 14.5vh;
+  opacity: 1;
+  backface-visibility: hidden;
+  background-color: #743838;
+  color: white;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+a {
+  color: white;
+  font-family: 'Xanh Mono';
+  font-size: 20px;
+  text-decoration: underline;     
+}
+
+/* Guitar - https://www.youtube.com/watch?v=geRBqZjBgQs */
+
+/* Styles the fretboard */
+/* Dark brown for a rosewood neck....the coolest necks */
+.fretboard {
+  display: flex; 
+  flex-direction: column;
+  background: #312617;
+  width: 100%;
+  height: calc(var(--fretBoardHeight) * 1px);
+  margin-top: 50px;
+}
+
+/* Styles the strings */
+.string {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+
+.string:before {
+  content: '';
+  width: 100%;
+  height: calc(var(--stringHeight) * 1px);
+  /* Linear-gradient and box shadow help make it look like a real string */ 
+  background: linear-gradient(#eee, #999);
+  box-shadow: 76px 3px 10px #806233;
+  z-index: 1;
+  position: absolute;
+  top: calc(var(--stringTop) * 1px);
+}
+
+.note-Fret {
+  display: flex;
+  /* Spans evenly */
+  flex: 1; 
+  /* Makes the fret */
+  border-right: 20px solid; 
+  border-image: linear-gradient(to left, #777, #bbb, #777) 1 100%;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* Styles the 0th fret (open string) */
+.note-Fret:first-child {
+  background: #161717; 
+  min-width: 76px;
+  border-right: 12px solid; 
+  /* No matter how you resize the page this fret will stay the right size */
+  flex-grow: 0;
+  flex-shrink: 0;
+  border-image: linear-gradient(to left, #bbb, #fff, #bbb) 1 100%;
+}
+
+.note-Fret:before {
+  content: 'db';
+  width: 33px;
+  height: 33px;
+  border-radius: 50%;
+  /* Puts in middle */
+  line-height: 33px;
+  text-align: center;
+  background: #743838;
+  z-index: 2;
+  color: #eee;
+  opacity: 1;
+}
+
+.single-Fretmark:after, .double-Fretmark:before, .double-Fretmark:after {
+  content: '';
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #fff;
+}
+/* Styles the fretmarks */
+.single-Fretmark:after {
+  top: calc(var(--fretBoardHeight) / 2 * 1px);
+  /* Cool trick to position the dots */
+  transform: translate(0, -50%);
+}
+
+/* Styles first dot of 12th fret */
+.double-Fretmark:before {
+  top: calc(var(--doubleFretmarkPosition1) * 1px);
+  transform: translate(-140%, -50%);
+}
+
+/* Styles second dot of 12th fret */
+.double-Fretmark:after {
+  top: calc(var(--doubleFretmarkPosition2) * 1px);
+  transform: translate(-140%, -50%);
+}
+
+/* Styling for words on guitar page */
+.guitar {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  margin-left: 5%;
+  margin-right: 5%;
+  text-align: center;
+  color: #fff;
+  font-family: 'Xanh Mono';
+  font-size: 30px;
+}

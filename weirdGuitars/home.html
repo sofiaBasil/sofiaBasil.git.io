@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Home </title>
+        <script src="weirdGuitars.js" defer></script>
+        <link rel="stylesheet" type="text/css" href="weirdGuitars.css">
+        <link href="https://fonts.googleapis.com/css2?family=Playfair+Display+SC:ital,wght@1,900&family=Special+Elite&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+        <div class="headerBar"> 
+            <div class="titleBox">
+                <div class="title">
+                    <h1> Weird Guitars </h1>
+                </div>
+            </div>
+            <ul class="menu">       
+                <a href="home.html" class="active"><li> Home <br></li>
+                    <img class="circles" src="home.png"> 
+                </a>
+                <a href="inventory.html" class="active"><li> Inventory <br></li>
+                    <img class="circles" src="inventory.png"> 
+                </a>
+                <a href="guitar.html"><li> Guitar <br></li>
+                    <img class="circles" src="contact.png"> 
+                </a>
+            </ul>
+        </div>
+
+        <div class="homePage">
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="app" src="home.png">
+                    </div>
+                    <!-- https://www.w3schools.com/css/tryit.asp?filename=trycss_forms -->
+                    <div class="flip-card-back">
+                        <br>
+                        <h1> Appointment </h1>
+                        <br> <br>
+                        <div>
+                            <form action="/action_page.php">
+                                <label for="fname">First Name</label>
+                                <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                <br> <br>
+                                <label for="lname">Last Name</label>
+                                <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                <br> <br>
+                                <label for="reason">Reason</label>
+                                <select id="reason" name="reason">
+                                    <option value="setUp">Set Up</option>
+                                    <option value="purchase">Purchase</option>
+                                    <option value="browse">Browse</option>
+                                    <option value="consultation">Consultation</option>
+                                </select>
+                            
+                                <input type="submit" value="Submit">
+                            </form>
+                          </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="app" src="contact.png">
+                    </div>
+                    <div class="flip-card-back">
+                        <h1> Location </h1>
+                        <p> The Basement </p>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6086.826991327941!2d-74.01119155391306!3d40.28877696711577!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2250d8670a9af%3A0xb94aee5a3b9da913!2s232%20Norwood%20Ave%2C%20West%20Long%20Branch%2C%20NJ%2007764!5e0!3m2!1sen!2sus!4v1607112633350!5m2!1sen!2sus" width="250" height="90" border-radius: 24.5vh frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="app" src="inventory.png">
+                    </div>
+                    <div class="flip-card-back">
+                        <br><br><br>
+                        <h1> Experience </h1>
+                        <p> Weird </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="app" src="h2.png">
+                    </div>
+                    <div class="flip-card-back">
+                        <br><br>
+                        <h1> Phone Number </h1>
+                        <p> 732-249-2406 </p>
+                        <h1> Email </h1>
+                        <a href="ccioffilp@gmail.com">click to email</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="app" src="h1.png">
+                    </div>
+                    <div class="flip-card-back">
+                        <br><br>
+                        <h1> Instagram </h1>
+                        <a href="https://www.instagram.com/cianocioffi/">@cianocioffi</a>
+                        <h1> Facebook </h1>
+                        <a href="https://www.facebook.com/ciano.cioffi"> Message Here</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img class="app" src="h3.png">
+                    </div>
+                    <div class="flip-card-back">
+                        <br><br><br>
+                        <h1> Twitch </h1>
+                        <a href="https://www.twitch.tv/cianocioffi">Follow me on Twitch!</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Star Rating 
+        https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_star_rating
+        -->
+    </body>
+
+</html>
+
