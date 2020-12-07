@@ -34,9 +34,8 @@ const app = {
     setUpFretboard() {
         root.style.setProperty('--numOfStrings', numOfStrings);
 
-        let x = 0; 
         // Add strings to fretboard
-        for (var i = 0; i < numOfStrings; i++) {
+        for (let i = 0; i < numOfStrings; i++) {
             let string = tools.createElement('div');
             string.classList.add('string');
             fretBoard.appendChild(string);
@@ -85,8 +84,15 @@ const app = {
         }
         return noteName; 
     }, 
+    // So the note appears when you hover over it
     setupEventListeners() {
         fretBoard.addEventListener('mouseover', (event) => {
+            if(event.target.classList.contains('note-Fret')) {
+                event.target.style.setProperty('--noteOpacity', 1);
+            }
+        });
+        fretBoard.addEventListener('mouseout', () => {
+            event.target.style.setProperty('--noteOpacity', 0);
         });
     }
 }

@@ -13,6 +13,8 @@ html {
   --stringTop: calc(var(--fretBoardHeight) / var(--numOfStrings) / 2 - var(--halfStringHeight));
   --doubleFretmarkPosition1: calc(var(--fretBoardHeight) * 0.25);
   --doubleFretmarkPosition2: calc(var(--fretBoardHeight) * 0.75);
+  /* Controls opacity of note*/
+  --noteOpacity: 0; 
 }
 
 /* Applies to everything */
@@ -299,7 +301,7 @@ a {
 }
 
 .note-Fret:before {
-  content: 'db';
+  content: attr(data-note);
   width: 33px;
   height: 33px;
   border-radius: 50%;
@@ -309,7 +311,7 @@ a {
   background: #743838;
   z-index: 2;
   color: #eee;
-  opacity: 1;
+  opacity: var(--noteOpacity);
 }
 
 .single-Fretmark:after, .double-Fretmark:before, .double-Fretmark:after {
