@@ -134,9 +134,10 @@ body {
 }
   
 .flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  width: 35vh;
+  height: 35vh;
+  border-radius: 14.5vh;
+  position: absolute;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -155,36 +156,42 @@ body {
 }
 
 .flip-card-front {
+  width: 35vh;
+  height: 35vh;
+  border-radius: 14.5vh;
+  opacity: 1;
+  backface-visibility: hidden;
   color: black;
 }
   
-  .flip-card-back {
-    width: 35vh;
-    height: 35vh;
-    border-radius: 14.5vh;
-    opacity: 1;
-    backface-visibility: hidden;
-    background-color: #743838;
-    color: white;
-    transform: rotateY(180deg);
-  }
-  
+.flip-card-back {
+  width: 35vh;
+  height: 35vh;
+  border-radius: 14.5vh;
+  opacity: 1;
+  background-color: #743838;
+  color: white;
+  transform: rotateY(180deg);
+}
+
 /* Inventory Page Flip Cards */
 
 /* flip-card */
 .inventory-flip-card {
   margin: 3%;
   background-color: transparent;
-  width: 300px;
-  height: 300px;
+  width: 35vh;
+  height: 45vh;
+  border-radius: 3vh;
   perspective: 1000px;
 }
 
 /* flip-card-inner */
 .inventory-flip-card-inner {
-  position: relative;
-  width: 100%;
-  height: 100%;
+  width: 35vh;
+  height: 45vh;
+  border-radius: 3vh;
+  position: absolute;
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
@@ -206,6 +213,11 @@ body {
 
 /* flip-card-front */
 .inventory-flip-card-front {
+  width: 35vh;
+  height: 45vh;
+  border-radius: 3vh;
+  opacity: 1;
+  backface-visibility: hidden;
   color: black;
 }
 
@@ -215,25 +227,10 @@ body {
   height: 45vh;
   border-radius: 3vh;
   opacity: 1;
-  backface-visibility: hidden;
   background-color: #743838;
   color: white;
   transform: rotateY(180deg);
-}
-
-.contact-App {
-  display: flex;
-  width: 35vh;
-  height: 35vh;
-  border-radius: 14.5vh;
-  opacity: 1;
-  backface-visibility: hidden;
-  background-color: #743838;
-  color: white;
-  margin-left: 5%;
-  margin-right: 5%;
-  margin-top: 2%;
-  margin-bottom: 2%;
+  font-size: 16px;
 }
 
 a {
@@ -352,7 +349,7 @@ a {
   text-align: center;
   color: #fff;
   font-family: 'Xanh Mono';
-  font-size: 30px;
+  font-size: 24px;
 }
 
 /* Styles the photos on the pitch phase */
@@ -367,7 +364,7 @@ a {
 }
 
 /* Styles the text on the pitch phase */
-#pitchP {
+.pitchP {
   text-align: center;
   color: #fff;
   margin-left: 5%;
@@ -378,12 +375,6 @@ a {
  
 /* Media Query for smaller devices*/
 @media (max-width: 750px) {
-  .inventory-flip-card {
-      display: flex; 
-      flex-direction: column;
-      justify-content: center;
-  }
-
   .headerBar {
       display: flex; 
       flex-direction: column;
@@ -396,7 +387,6 @@ a {
   .titleBox {
     text-align: center;
     margin: auto;
-    ;
   }
 
   .title {
@@ -408,7 +398,16 @@ a {
     display: flex; 
     flex-direction: column;
     text-align: center;
-}
+  }
+
+  .inventory-flip-card {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-top: 2%;
+    margin-bottom: 2%;
+  }
+
 }
 
 
@@ -423,7 +422,7 @@ a {
     perspective: 1000px;
   }
 
-  .flip-card-back {
+  .flip-card-back, .flip-card-front {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -439,7 +438,7 @@ a {
     perspective: 1000px;
   }
 
-  .inventory-flip-card {
+  .inventory-flip-card-back, .inventory-flip-card-front {
     position: absolute;
     width: 100%;
     height: 100%;
